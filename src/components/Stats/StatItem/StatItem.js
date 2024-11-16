@@ -2,8 +2,9 @@ import React from 'react';
 import './StatItem.css';
 
 function StatItem(props) {
+  const isHighLighted = ["Пв", "Вын", "Пз"].includes(props.statName);
   return (
-    <li className='stats__item'>
+    <li className={`stats__item ${isHighLighted ? 'stats__item--highlighted' : ''}`}>
       <span className='stats__name'>{props.statName}</span>
       {props.isEditing ? (
         <input className='stats__input'

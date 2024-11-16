@@ -1,37 +1,50 @@
-
 .stats__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 1 auto;
-
-  border: 1px solid #818181;
+  justify-content: center;
+  width: 100%; /* Автоматически подстраивается под размер колонки */
+  height: 60px; /* Уменьшено в два раза */
+  background: #3e3e3e;
+  border-radius: 10px;
+  border: 2px solid #6a4e2f;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 5px; /* Уменьшено для компактности */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.stats__item:first-child {
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
-}
-
-.stats__item:last-child {
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
+.stats__item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
 }
 
 .stats__name {
+  font-size: 0.7em; /* Уменьшен размер шрифта */
+  color: #ffd700;
   text-transform: uppercase;
-  border-bottom: 1px solid #818181;
-  padding: 8px;
-
+  margin-bottom: 2px; /* Уменьшен отступ */
 }
 
 .stats__value {
-  padding: 8px;
+  font-size: 0.9em; /* Уменьшен размер шрифта */
+  color: #d3d3d3;
+  font-weight: bold;
 }
 
-.stats__input{ 
-  display: inline-block;
-  width: 50px;
+.stats__input {
+  font-size: 0.9em; /* Уменьшен размер шрифта */
+  color: #ffd700;
+  background-color: #2c2c2c;
+  border: 2px solid #6a4e2f;
+  border-radius: 5px;
+  width: 40px; /* Уменьшена ширина */
+  text-align: center;
 }
-input::placeholder{
+
+
+.stats__item--highlighted {
+  background: #6a4e2f; /* Другой фон */
+  border-color: #ffd700; /* Золотистая рамка */
+  box-shadow: 0 2px 15px rgba(255, 215, 0, 0.8);
 }

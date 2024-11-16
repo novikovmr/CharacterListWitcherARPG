@@ -1,0 +1,23 @@
+.edit-save-button {
+  background: linear-gradient(45deg, #3e3e3e, #6a4e2f);
+  border: 2px solid #6a4e2f;
+  color: #ffd700;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-save-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.edit-save-button:active {
+  transform: scale(0.95);
+}
+
+.edit-save-button > svg {
+  pointer-events: none; /* Чтобы клики на иконке передавались кнопке */
+}

@@ -32,9 +32,9 @@ const userStatData = [
   {id: "stat7", name: "Рем", shortName: "Рем", value: 7},
   {id: "stat8", name: "Воля", shortName: "Вол", value: 7},
   {id: "stat9", name: "Отдых", shortName: "Отд", value: 2},
-  {id: "stat10", name: "Переносимый вес", shortName: "ПВ", value: 34},
+  {id: "stat10", name: "Переносимый вес", shortName: "Пв", value: 34},
   {id: "stat11", name: "Выносливость", shortName: "Вын", value: 45},
-  {id: "stat12", name: "ПЗ", shortName: "ПЗ", value: 45},
+  {id: "stat12", name: "ПЗ", shortName: "Пз", value: 45},
   {id: "stat13", name: "Прыжок", shortName: "Пры", value: 4},
   {id: "stat14", name: "Бег", shortName: "Бег", value: 3},
   {id: "stat15", name: "Устойчивость", shortName: "Уст", value: 4},
@@ -72,7 +72,7 @@ function Stats() {
           />
         ))}
       </ul>
-      <EditSaveButton onClick = {toggleEditing}>{isEditing ? 'Сохранить' : 'Редактировать'}</EditSaveButton>
+      <EditSaveButton onClick={toggleEditing} isEditing={isEditing} />
     </div>
   )
 }

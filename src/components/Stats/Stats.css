@@ -1,12 +1,19 @@
-.statsList {
- display: flex; 
- /* justify-content: space-between; */
- 
- list-style-type: none;
-
- padding: 0;
- margin: 0;
+.stats {
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(45deg, #2b2b2b, #4e4e4e);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+  gap: 5px; 
+  justify-items: center;
 }
 
 
-
+.statsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: contents; /* Убираем лишний контейнер */
+}
