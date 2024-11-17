@@ -14,10 +14,11 @@ function App() {
   const updatePlayerData = (updatedData) => {
     setPlayerData(updatedData);
   }
+
   return (
     <div className="App">
       <div className='container'>
-        <Stats />
+        <Stats playerData={playerData} updatePlayerData={updatePlayerData}/>
         <div className='playerInfo__container'>
           <PlayerInfo playerData={playerData}/>
           <WeaponList weaponsData={weaponsData} 

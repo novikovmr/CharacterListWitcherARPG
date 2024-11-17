@@ -2,35 +2,28 @@ import React, { useState } from 'react';
 import './Stats.css';
 import StatItem from './StatItem/StatItem';
 import EditSaveButton from '../EditSaveButton/EditSaveButton';
-import { userStatData } from '../../data/data.js';
 
-// const userStatData = {
-//   "Рефлексы" : 1,
-//   "Интелект" : 7,
-//   "Ловкость" : 2,
-//   "Тело" : 4,
-//   "Скорость" : 5,
-//   "Эмпатия" : 8,
-//   "Рем" : 7,
-//   "Воля" : 7,
-//   "Отдых" : 2,
-//   "Переносимый вес" : 34,
-//   "Выносливость" : 45,
-//   "ПЗ" : 45,
-//   "Прыжок" : 4,
-//   "Бег" : 3,
-//   "Устойчивость" : 4,
-//   "Удача" : 2
-// }
+/**
+ * Компонент Stats отображает и позволяет редактировать характеристики игрока.
+ *
+ * @param {Object} props - Входные данные для компонента.
+ * @param {Object} props.playerData - Данные игрока, включая текущие характеристики.
+ * @param {Function} props.updatePlayerData - Функция для обновления данных игрока.
+ */
+function Stats(props) {
+  // Локальное состояние характеристик для управления изменениями
+  const [stats, setStats] = useState(props.playerData.stats);
 
-
-
-function Stats() {
-
-  const [stats, setStats] = useState(userStatData);
+  // Состояние режима редактирования
   const [isEditing, setIsEditing] = useState(false);
 
-  //Обработчик для обновления значений характеристик
+
+  /**
+   * Обновляет значение характеристики.
+   *
+   * @param {number} index - Индекс изменяемой характеристики.
+   * @param {number} newValue - Новое значение характеристики.
+   */
   const handleInputChange = (index, newValue) => {
     const updatedStats = stats.map((stat, i) => 
       i === index ? {...stat, value: newValue} : stat
@@ -38,8 +31,14 @@ function Stats() {
     setStats(updatedStats);
   }
 
-  //Обработчик для переключения режима редактирования
+  /**
+   * Переключает режим редактирования.
+   * При выходе из режима редактирования сохраняет изменения в `playerData`.
+   */
   const toggleEditing = () => {
+    if (isEditing) {
+      props.updatePlayerData({...props.playerData, stats})
+    }
     setIsEditing(!isEditing);
   }
 
