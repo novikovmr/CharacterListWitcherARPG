@@ -1,0 +1,94 @@
+.weapon__item {
+  background-color: #222222; /* Темный фон */
+  border-radius: 8px;
+  border: 2px solid #6a4e2f;
+  padding: 10px;
+  color: #ffd700; /* Золотистый цвет текста */
+  transition: background-color 0.3s ease; /* Плавный эффект при наведении */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.weapon__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, minmax(30px, auto));
+  gap: 8px;
+}
+
+.weapon__buttonContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.weapon__delete {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  
+}
+
+.weapon__delete:hover {
+  color: #f44336; /* Изменение цвета при наведении на кнопку */
+}
+
+.weapon__item:hover {
+  background-color: #444444; /* Изменение фона при наведении */
+}
+
+.weapon__name {
+  grid-column: span 2;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.weapon__damage {
+  color: #f44336;
+}
+
+.weapon__accuracy {
+  color: #b9ca1f;
+}
+
+.weapon__accuracy,
+.weapon__damage,
+.weapon__durability,
+.weapon__grip,
+.weapon__effect,
+.weapon__secrecy,
+.weapon__gain,
+.weapon__weight {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.weapon__accuracy,
+.weapon__damage,
+.weapon__durability,
+.weapon__grip,
+.weapon__weight {
+  text-align: center;
+}
+
+.weapon__effect,
+.weapon__secrecy,
+.weapon__gain {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .weapon__item {
+    grid-template-columns: 1fr; /* Все колонки в одну для маленьких экранов */
+    grid-template-rows: repeat(8, auto);
+  }
+}

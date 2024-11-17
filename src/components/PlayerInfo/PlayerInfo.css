@@ -1,0 +1,37 @@
+.player-info {
+  width: 30%; /* Занимает не более 30% экрана */
+  background: linear-gradient(135deg, #2b2b2b, #4e4e4e);
+  color: #ffd700;
+  border: 2px solid #6a4e2f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}
+
+.player-info__title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #ffdd57;
+  border-bottom: 2px solid #6a4e2f;
+  padding-bottom: 10px;
+}
+
+.player-info__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.player-info__list li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.player-info__list strong {
+  color: #ffdd57;
+}
